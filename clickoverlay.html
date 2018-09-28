@@ -1,0 +1,69 @@
+/* Source URL http://jsfiddle.net/hr9bymj1/8/ */
+<html>
+<div class="overlay"> &nbsp;
+</div>
+<div id="slideout">
+    <div id="slidecontent">
+        I am the content. I am the king!
+    </div>
+    <div id="clickme">
+    </div>
+</div>
+</html>
+<style>
+#slideout {
+    background: #f4f4f4;
+    position: absolute;
+    width: 400px;
+    height: 150px;
+    top: 30%;
+    left:-400px;
+    padding-left: 0;
+    z-index: 50;
+}
+
+#clickme {
+    position: absolute;
+    top: 0; right: -20px;
+    height: 20px;
+    width: 20px;
+    background: tomato;
+    cursor: pointer;
+}
+
+#slidecontent {
+    float:left;
+    padding: 35px;
+}
+
+.overlay {
+    display:none;
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    filter: alpha(opacity = 50); /* IE7 & 8 */
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 49;
+}
+</style>
+<script>
+( function ( $ ) {
+
+  $(function () {
+
+    $("#clickme").click(function () {
+        if($(this).parent().hasClass("popped")){
+            $(this).parent().animate({left:'-400px'}, {queue: false, duration: 500}).removeClass("popped");
+            $(".overlay").fadeOut(500);
+        }else {
+            $(this).parent().animate({left: "0px" }, {queue: false, duration: 500}).addClass("popped");
+            $(".overlay").fadeIn(500);
+        }
+    });
+});
+
+} )( jQuery );
+</script>

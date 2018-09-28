@@ -1,0 +1,73 @@
+/* =========================================================
+                      PENTAMINT DEFAULT
+   ========================================================= */
+body { /* default font design */
+  -webkit-tap-highlight-color:transparent; /* 클릭 하이라이트 제거 */
+  -ms-overflow-style: none; /* 크로스브라우징 설정 */
+  word-break: keep-all; /* Wordwrap 설정 */
+  font-size: 100%;
+  font-weight: normal;
+}
+a, a:hover, a:active, a:visited, a:focus { /* remove text decoration after click */
+  text-decoration: none !important;
+}
+.clearfix { /* clearfix hack */
+  overflow: auto;
+}
+.container, .et-db #et-boc .et_pb_row { /* site width */
+  max-width: 1200px;
+}
+.container { /* header container properties */
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+.page-content, .entry-content, .entry-summary { /* removed content top margin */
+  margin-top: 0;
+}
+.site-title, .site-description, .entry-header { /* elements to remove */
+  display: none;
+}
+@media screen and (max-width:1400px) {
+  .container, .et-db #et-boc .et_pb_row { /* small to mid screen site width */
+    width: 80%;
+  }
+}
+/* =========================================================
+                    PENTAMINT DEFAULT END
+   ========================================================= */
+
+/* =========================================================
+                        CUSTOM CSS
+   ========================================================= */
+
+/* ----- Typography ----- */
+body {
+  font-family: 'Roboto', 'Nanum Gothic', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, body, input, textarea, select { /* title font design */
+  font-family: 'Montserrat', 'Nanum Gothic', sans-serif;
+}
+a:hover, a:focus, a:active {
+  color: blue;
+}
+a, a:visited {
+  color: #000;
+}
+
+/* ----- Header ----- */
+/* logo size */
+.custom-logo-link img {
+  height: 75px;
+}
+/* main nav menu */
+.main-navigation {
+  position: absolute;
+  top: 28px;
+  right: 0;
+  width: unset;
+}
+
+/* =========================================================
+                        CUSTOM CSS
+   ========================================================= */
