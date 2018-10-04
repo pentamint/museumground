@@ -43,15 +43,6 @@ a, a:hover, a:active, a:visited, a:focus { /* remove text decoration after click
 .page-id-96 footer { /* remove & footer */
   display: none;
 }
-.page-id-96 #primary:after { /* logo */
-  content: url(https://s3-ap-northeast-2.amazonaws.com/museumground/wp-content/uploads/2018/10/03141641/MG_logo_vert_img_txt_white.svg);
-  position: absolute;
-  width: 4em;
-  top: 1em;
-  left: 50%;
-  margin-left: -1.5em;
-  z-index: 9;
-}
 .page-id-96 .hentry { /* margin bottom */
   margin: 0;
 }
@@ -65,10 +56,10 @@ a, a:hover, a:active, a:visited, a:focus { /* remove text decoration after click
 
 /* ----- Typography ----- */
 body {
-  font-family: 'Roboto', 'Nanum Gothic', sans-serif;
+  font-family: 'Noto Sans KR', 'Lato', sans-serif;
 }
 h1, h2, h3, h4, h5, h6, body, input, textarea, select { /* title font design */
-  font-family: 'Montserrat', 'Nanum Gothic', sans-serif;
+  font-family: 'Noto Sans KR', 'Lato', sans-serif;
 }
 a:hover, a:focus, a:active {
   color: blue;
@@ -88,6 +79,19 @@ a, a:visited {
   top: 28px;
   right: 0;
   width: unset;
+}
+
+@media all and (max-width: 1199px) {
+
+}
+@media all and (max-width: 991px) {
+
+}
+@media all and (max-width: 768px) {
+
+}
+@media all and (max-width: 575px) {
+
 }
 
 /* =========================================================

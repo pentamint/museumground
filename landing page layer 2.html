@@ -1,0 +1,306 @@
+<html>
+  <div class="landing-container">
+    <button id="openbtn" class="animated fadeIn">
+     전시정보 확인
+    </button>
+    <div class="hero-description-1">
+      OPENNING<br>
+      2018.10.6 4PM
+    </div>
+    <div class="hero-title">
+      FLAMME INTERIEURE
+    </div>
+    <div class="hero-title-kor">
+      심연의 불꽃
+    </div>
+    <div class="hero-description-2">
+      2018.10.7 - 2019.3.24
+    </div>
+    <div class="bottom-msg">
+      2018 뮤지엄그라운드 개관특별전
+    </div>
+    <div class="rectangle-left"></div>
+    <div class="rectangle-right"></div>
+  </div>
+</html>
+<style>
+body {
+  overflow: hidden;
+}
+#landing-overlay {
+  display: none;
+  position: fixed !important;
+}
+.overlay {
+  display: block !important;
+  background-color: #00416b !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+  filter: alpha(opacity = 50); /* IE7 & 8 */
+  z-index: 50;
+}
+#landing-logo {
+  margin-top: 2em !important;
+}
+#landing-content {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 1000px !important;
+  z-index: 51;
+  width: 100%;
+}
+#landing-content .landing-container {
+  color: #fff;
+}
+.hero-description-1 {
+ font-family: Lato;
+ font-size: 1.3em;
+}
+.hero-title {
+ font-family: Lato;
+ font-size: 3.75em;
+ font-weight: 900;
+}
+.hero-title-kor {
+ font-family: NotoSansCJKkr;
+ font-size: 1.3em;
+ text-align: right !important;
+ margin-top: 11em !important;
+}
+.hero-description-2 {
+ font-family: Lato;
+ font-size: 3em;
+ font-weight: 900;
+ text-align: right !important;
+}
+.bottom-msg {
+  margin-top: 2.5em !important;
+  font-family: NotoSansCJKkr;
+  font-size: 1.3em;
+}
+.rectangle-left {
+  position: absolute;
+  width: 2px;
+  height: 22em;
+  top: 10em;
+  background-color: #ffffff !important;
+}
+.rectangle-right {
+  position: absolute;
+  width: 2px;
+  height: 22em;
+  background-color: #ffffff !important;
+  right: 0;
+  top: 0;
+}
+#slideout {
+  position: fixed !important;
+  width: 100%;
+  max-width: 1000px !important;
+  height: 100%;
+  max-height: 700px;
+  z-index: 51;
+  background-color: #fff !important;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 3em 0 !important;
+  overflow-y: scroll;
+}
+#slideout .slide-row {
+  width: 100% !important;
+  padding: 0 40px !important;
+}
+#slideout .slide-row .slide-row-h2, #slideout .slide-row .slide-row-p {
+  color: #00416b;
+}
+#slideout .slide-row .slide-row-h2 h2 {
+  font-weight: 700;
+}
+#slideout .slide-row .slide-row-p p {
+  font-size: .875em;
+  line-height: 1.7em;
+}
+#slideout .slide-divider {
+  padding: 0 40px;
+}
+#openbtn {
+  position: absolute;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 15vw;
+  min-width: 8em;
+  height: 3em;
+  border-radius: 40px !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3) !important;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.1em;
+  font-weight: 700;
+  text-align: center !important;
+  color: #00416b !important;
+  cursor: pointer;
+  z-index: 50;
+}
+#closebtn {
+  display: none;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: calc(50% - 400px);
+  right: calc((100vw - 1000px) /2);
+  z-index: 53;
+}
+#closebtn::before, #closebtn::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  background: #fff;
+}
+#closebtn::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#closebtn::after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.bottom-address {
+ position: absolute;
+ bottom: 4em;
+}
+.tablepress td {
+  border: 1px solid #00416b !important;
+  text-align: center;
+  color: #00416b;
+  font-size: .875em;
+}
+.tablepress .row-1 {
+  background-color: #fafafa;
+}
+@media all and (max-width: 1400px) {
+  .container, .et-db #et-boc .et_pb_row {
+    width: 100%;
+  }
+}
+@media all and (max-width: 991px) {
+  #closebtn {
+    right: calc((100vw - 80%) /2);
+  }
+  #slideout, #landing-content {
+    width: 80%;
+  }
+}
+@media all and (max-width: 768px) {
+  #daumRoughmapContainer1538687994691 {
+    width: 100% !important;
+  }
+}
+@media all and (max-width: 575px) {
+  #landing-logo img {
+    width: 3em;
+  }
+  #landing-content {
+    height: 100vh;
+  }
+  #landing-content .landing-container {
+    margin-top: 5em;
+  }
+  #openbtn {
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    width: 100vw;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transform: translate(-50%,0);
+  }
+  .hero-description-1 {
+    font-size: 1em;
+  }
+  .hero-title {
+    font-size: 3em;
+    line-height: 1.2em;
+  }
+  .rectangle-left {
+    width: 4px;
+    height: 14em;
+    top: 10.5em;
+  }
+  .rectangle-right {
+    width: 4px;
+    height: 14em;
+  }
+  .hero-title-kor {
+    font-size: .875em;
+    margin-top: 5em !important;
+  }
+  .hero-description-2 {
+    font-size: 1.5em;
+  }
+  .bottom-msg {
+    margin-top: 8em !important;
+    font-size: .875em;
+  }
+  .bottom-address {
+    display: none;
+  }
+  #slideout {
+    width: 100%;
+    top: 0;
+    transform: translate(-50%,0);
+    max-height: unset;
+  }
+  #closebtn {
+    right: 2em;
+    top: 2.5em;
+  }
+  #closebtn::before, #closebtn::after {
+    background: #00416b;
+  }
+}
+</style>
+<script>
+( function ( $ ) {
+
+  $("#closebtn").prependTo(".et_builder_inner_content");
+  $("#openbtn").click(function () {
+  	if(!$("#slideout").hasClass("popped")){
+  		$("#slideout").animate({opacity: "1" }, {queue: false, duration: 500}).css({'z-index': 52 }).addClass("popped");
+      $(".landing-container").animate({opacity: "0" }, {queue: false, duration: 500});
+   		$("#landing-overlay").addClass("overlay");
+      $("#closebtn").css({display: "block" });
+      $("#openbtn").css({display: "none" });
+   }
+  });
+  $("#closebtn").click(function () {
+  	if($("#slideout").hasClass("popped")){
+  		$("#slideout").animate({opacity: "0" }, {queue: false, duration: 500}).css({'z-index': 51 }).removeClass("popped");
+      $(".landing-container").animate({opacity: "1" }, {queue: false, duration: 500});
+   		$("#landing-overlay").removeClass("overlay");
+      $("#closebtn").css({display: "none" });
+      $("#openbtn").css({display: "block" });
+   }
+  });
+
+} )( jQuery );
+</script>
