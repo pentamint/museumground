@@ -40,10 +40,10 @@ a, a:hover, a:active, a:visited, a:focus { /* remove text decoration after click
 /* =========================================================
                         LANDING PAGE
    ========================================================= */
-.page-id-96 #masthead {
+.page-id-96 footer { /* remove & footer */
   display: none;
 }
-.page-id-96 #primary:after {
+.page-id-96 #primary:after { /* logo */
   content: url(https://s3-ap-northeast-2.amazonaws.com/museumground/wp-content/uploads/2018/10/03141641/MG_logo_vert_img_txt_white.svg);
   position: absolute;
   width: 4em;
@@ -51,6 +51,9 @@ a, a:hover, a:active, a:visited, a:focus { /* remove text decoration after click
   left: 50%;
   margin-left: -1.5em;
   z-index: 9;
+}
+.page-id-96 .hentry { /* margin bottom */
+  margin: 0;
 }
 /* =========================================================
                        LANDING PAGE END

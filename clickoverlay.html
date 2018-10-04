@@ -1,69 +1,185 @@
-/* Source URL http://jsfiddle.net/hr9bymj1/8/ */
 <html>
-<div class="overlay"> &nbsp;
+<div class="landing-container">
+ <div class="OPENNING-2018106-4">
+ OPENNING<br>
+ 2018.10.6 4PM
+ </div>
+ <div class="FLAMME-INTERIEURE">
+ FLAMME INTERIEURE
+ </div>
+ <div id="clickme">
+ 전시정보 확인
+ </div>
+ <div class="FLAMME-INTERIEURE-KOR">
+ 심연의 불꽃
+ </div>
+ <div class="exhibition-date">
+ 2018.10.7 - 2019.3.24
+ </div>
+ <div class="bottom-msg">
+ 2018 뮤지엄그라운드 개관특별전
+ </div>
+ <div class="rectangle-left"></div>
+ <div class="rectangle-right"></div>
+ <div class="overlay"></div>
+ <div id="slideout">
+ <div id="slidecontent">
+ I am the content. I am the king!
+ </div>
+ </div>
 </div>
-<div id="slideout">
-    <div id="slidecontent">
-        I am the content. I am the king!
-    </div>
-    <div id="clickme">
-    </div>
+<div class="bottom-address">
+ 뮤지엄 그라운드 경기도 용인시 수지구 샘말로 122
 </div>
 </html>
 <style>
+.landing-container {
+ position: absolute;
+ margin: 0 auto;
+ top: 300px;
+ left: 50%;
+ max-width: 1000px;
+ background-color: #000;
+}
+.OPENNING-2018106-4 {
+ width: 166px;
+ height: 58px;
+ font-family: Lato;
+ font-size: 24px;
+ font-weight: 900;
+ font-style: normal;
+ font-stretch: normal;
+ line-height: normal;
+ letter-spacing: normal;
+ color: #ffffff;
+}
+.FLAMME-INTERIEURE {
+ width: 979px;
+ height: 115px;
+ font-family: Lato;
+ font-size: 60px;
+ font-weight: 900;
+ font-style: normal;
+ font-stretch: normal;
+ line-height: normal;
+ letter-spacing: normal;
+ color: #ffffff;
+}
+.FLAMME-INTERIEURE-KOR {
+ width: 116px;
+ height: 36px;
+ font-family: NotoSansCJKkr;
+ font-size: 24px;
+ font-weight: bold;
+ font-style: normal;
+ font-stretch: normal;
+ line-height: normal;
+ letter-spacing: normal;
+ color: #ffffff;
+}
+.exhibition-date {
+ width: 708px;
+ height: 86px;
+ font-family: Lato;
+ font-size: 72px;
+ font-weight: 900;
+ font-style: normal;
+ font-stretch: normal;
+ line-height: normal;
+ letter-spacing: normal;
+ color: #ffffff;
+}
+.bottom-msg {
+ width: 333px;
+ height: 36px;
+ font-family: NotoSansCJKkr;
+ font-size: 24px;
+ font-weight: bold;
+ font-style: normal;
+ font-stretch: normal;
+ line-height: normal;
+ letter-spacing: normal;
+ color: #ffffff;
+}
+.rectangle-left {
+ width: 4px;
+ height: 450px;
+ background-color: #ffffff;
+}
+.rectangle-right {
+ width: 4px;
+ height: 450px;
+ background-color: #ffffff;
+}
 #slideout {
-    background: #f4f4f4;
-    position: absolute;
-    width: 400px;
-    height: 150px;
-    top: 30%;
-    left:-400px;
-    padding-left: 0;
-    z-index: 50;
+ background: #f4f4f4;
+ position: absolute;
+ width: 1000px;
+ height: 150px;
+ top: 30%;
+ left: 50%;
+ padding-left: 0;
+ z-index: 50;
+ opacity: 0;
 }
 
 #clickme {
-    position: absolute;
-    top: 0; right: -20px;
-    height: 20px;
-    width: 20px;
-    background: tomato;
-    cursor: pointer;
+ left: calc(50% - 165px);
+ width: 330px;
+ height: 80px;
+ border-radius: 40px;
+ background-color: #ffffff;
+ box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+ font-family: NotoSansCJKkr;
+ font-size: 20px;
+ font-weight: bold;
+ font-style: normal;
+ font-stretch: normal;
+ line-height: 80px;
+ letter-spacing: normal;
+ text-align: center;
+ color: #00416b;
+ cursor: pointer;
+ z-index: 51;
 }
 
 #slidecontent {
-    float:left;
-    padding: 35px;
+ float:left;
+ padding: 35px;
 }
 
 .overlay {
-    display:none;
-    background-color: #000;
-    bottom: 0;
-    left: 0;
-    opacity: 0.5;
-    filter: alpha(opacity = 50); /* IE7 & 8 */
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 49;
+ display:none;
+ background-color: #000;
+ bottom: 0;
+ left: 0;
+ opacity: 0.5;
+ filter: alpha(opacity = 50); /* IE7 & 8 */
+ position: fixed;
+ right: 0;
+ top: 0;
+ z-index: 49;
+}
+.bottom-address {
+ position: absolute;
+ bottom: 2em;
 }
 </style>
 <script>
 ( function ( $ ) {
 
-  $(function () {
+ $(function () {
 
-    $("#clickme").click(function () {
-        if($(this).parent().hasClass("popped")){
-            $(this).parent().animate({left:'-400px'}, {queue: false, duration: 500}).removeClass("popped");
-            $(".overlay").fadeOut(500);
-        }else {
-            $(this).parent().animate({left: "0px" }, {queue: false, duration: 500}).addClass("popped");
-            $(".overlay").fadeIn(500);
-        }
-    });
-});
+ $("#clickme").click(function () {
+ if($("#slideout").hasClass("popped")){
+ $("#slideout").animate({opacity: "0" }, {queue: false, duration: 500}).removeClass("popped");
+ $(".overlay").fadeOut(500);
+ }else {
+ $("#slideout").animate({opacity: "1" }, {queue: false, duration: 500}).addClass("popped");
+ $(".overlay").fadeIn(500);
+ }
+ });
+ });
 
 } )( jQuery );
 </script>
