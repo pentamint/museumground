@@ -38,6 +38,25 @@ a, a:hover, a:active, a:visited, a:focus { /* remove text decoration after click
    ========================================================= */
 
 /* =========================================================
+                        LANDING PAGE
+   ========================================================= */
+.page-id-96 #masthead {
+  display: none;
+}
+.page-id-96 #primary:after {
+  content: url(https://s3-ap-northeast-2.amazonaws.com/museumground/wp-content/uploads/2018/10/03141641/MG_logo_vert_img_txt_white.svg);
+  position: absolute;
+  width: 4em;
+  top: 1em;
+  left: 50%;
+  margin-left: -1.5em;
+  z-index: 9;
+}
+/* =========================================================
+                       LANDING PAGE END
+  ========================================================= */
+
+/* =========================================================
                         CUSTOM CSS
    ========================================================= */
 
@@ -71,3 +90,13 @@ a, a:visited {
 /* =========================================================
                         CUSTOM CSS
    ========================================================= */
+/* ----- Master Slider ------*/
+.ms-view { /* fix left position */
+  left: 0 !important;
+}
+.ms-view, .ms-slide-bgcont, .ms-slide-bgcont img {
+  height: 100vh !important;
+}
+.ms-slide-bgcont img {
+  object-fit: cover;
+}
