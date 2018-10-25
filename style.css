@@ -1,5 +1,14 @@
 /* =========================================================
-                      PENTAMINT DEFAULT
+   CSS Table of Contents
+    1. Base
+    2. Layout
+    3. Module
+    4. State
+    5. Theme
+   ========================================================= */
+
+/* =========================================================
+   1. BASE
    ========================================================= */
 body { /* default font design */
   -webkit-tap-highlight-color:transparent; /* 클릭 하이라이트 제거 */
@@ -8,66 +17,31 @@ body { /* default font design */
   font-size: 100%;
   font-weight: normal;
 }
-a, a:hover, a:active, a:visited, a:focus { /* remove text decoration after click */
-  text-decoration: none !important;
+ul, menu, dir {
+  margin: 0;
+  padding: 0;
 }
+/* =========================================================
+   1. BASE END
+   ========================================================= */
+
+/* =========================================================
+   2. LAYOUT
+   ========================================================= */
 .clearfix { /* clearfix hack */
   overflow: auto;
 }
 .container, .et-db #et-boc .et_pb_row { /* site width */
   max-width: 1200px;
 }
-.container { /* header container properties */
+.container { /* container properties */
   width: 100%;
   margin: auto;
   position: relative;
 }
-.page-content, .entry-content, .entry-summary { /* removed content top margin */
-  margin-top: 0;
-}
 .site-title, .site-description, .entry-header { /* elements to remove */
   display: none;
 }
-@media screen and (max-width:1400px) {
-  .container, .et-db #et-boc .et_pb_row { /* small to mid screen site width */
-    width: 80%;
-  }
-}
-/* =========================================================
-                    PENTAMINT DEFAULT END
-   ========================================================= */
-
-/* =========================================================
-                        LANDING PAGE
-   ========================================================= */
-.page-id-96 footer { /* remove & footer */
-  display: none;
-}
-.page-id-96 .hentry { /* margin bottom */
-  margin: 0;
-}
-/* =========================================================
-                       LANDING PAGE END
-  ========================================================= */
-
-/* =========================================================
-                        CUSTOM CSS
-   ========================================================= */
-
-/* ----- Typography ----- */
-body {
-  font-family: 'Noto Sans KR', 'Lato', sans-serif;
-}
-h1, h2, h3, h4, h5, h6, body, input, textarea, select { /* title font design */
-  font-family: 'Noto Sans KR', 'Lato', sans-serif;
-}
-a:hover, a:focus, a:active {
-  color: blue;
-}
-a, a:visited {
-  color: #000;
-}
-
 /* ----- Header ----- */
 /* logo size */
 .custom-logo-link img {
@@ -79,6 +53,98 @@ a, a:visited {
   top: 28px;
   right: 0;
   width: unset;
+}
+/* ----- Site Content ----- */
+.page-content, .entry-content, .entry-summary { /* removed content top margin */
+  margin-top: 0;
+}
+@media screen and (max-width:1400px) {
+  .container, .et-db #et-boc .et_pb_row { /* small to mid screen site width */
+    width: 80%;
+  }
+}
+/* =========================================================
+   2. LAYOUT END
+   ========================================================= */
+
+/* =========================================================
+   3. MODULE
+   ========================================================= */
+/* --- Landing Page --- */
+.page-id-96 footer { /* remove & footer */
+  display: none;
+}
+.page-id-96 .hentry { /* margin bottom */
+  margin: 0;
+}
+/* --- Landing Page End --- */
+/* --- Master Slider ---*/
+.ms-view { /* fix left position */
+  left: 0 !important;
+}
+.ms-view, .ms-slide-bgcont, .ms-slide-bgcont img, .fs-slider {
+  height: 100vh !important;
+}
+.ms-slide-bgcont img {
+  object-fit: cover;
+}
+/* --- Master Slider end ---*/
+/* --- HTML5 Video Embed ---*/
+#primary .entry-content .fs-video-container {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+#primary .entry-content .fs-video-row {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+.fs-video video { /* fullscreen video code block */
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+#et-boc embed, #et-boc iframe, #et-boc object, #et-boc video { /* divi builder reset */
+  max-width: unset;
+}
+/* --- HTML5 Video Embed End ---*/
+/* =========================================================
+   3. MODULE END
+   ========================================================= */
+
+/* =========================================================
+   4. STATE
+   ========================================================= */
+a, a:hover, a:active, a:visited, a:focus { /* remove text decoration after click */
+  text-decoration: none !important;
+}
+/* =========================================================
+   4. STATE END
+   ========================================================= */
+
+/* =========================================================
+   5. THEME
+   ========================================================= */
+/* ----- Typography ----- */
+body {
+  font-family: 'Noto Sans KR', 'Lato', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, input, textarea, select { /* title font design */
+  font-family: 'Noto Sans KR', 'Lato', sans-serif;
+}
+a:hover, a:focus, a:active {
+  color: blue;
+}
+a, a:visited {
+  color: #000;
 }
 
 @media all and (max-width: 1199px) {
@@ -93,17 +159,6 @@ a, a:visited {
 @media all and (max-width: 575px) {
 
 }
-
 /* =========================================================
-                        CUSTOM CSS
+   5. THEME END
    ========================================================= */
-/* ----- Master Slider ------*/
-.ms-view { /* fix left position */
-  left: 0 !important;
-}
-.ms-view, .ms-slide-bgcont, .ms-slide-bgcont img {
-  height: 100vh !important;
-}
-.ms-slide-bgcont img {
-  object-fit: cover;
-}
