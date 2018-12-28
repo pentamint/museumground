@@ -1,0 +1,592 @@
+/*
+Theme Name: Museum Ground
+Theme URI: www.museumground.org
+Description: A Theme for WordPress with Bootstrap for styling.
+Author: Pentamint Co., Ltd.
+Author URI: www.pentamint.com
+Version: 1.0
+*/
+
+/* =========================================================
+   1. BASE
+   ========================================================= */
+html {
+  visibility: hidden;
+  scroll-behavior: smooth;
+}
+body { /* default font design */
+  -webkit-tap-highlight-color:transparent; /* 클릭 하이라이트 제거 */
+  -ms-overflow-style: none; /* 크로스브라우징 설정 */
+  word-break: keep-all; /* Wordwrap 설정 */
+  margin: 0;
+  background-color: #fff;
+  font-family: 'Noto Sans KR', 'Lato', sans-serif;
+  font-size: 100%;
+  font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6, input, textarea, select { /* title font design */
+  font-family: 'Noto Sans KR', 'Lato', sans-serif;
+}
+a, a:hover, a:active, a:visited, a:focus { /* remove text decoration after click */
+  text-decoration: none !important;
+}
+a:hover, a:focus, a:active {
+  color: #00283d;
+}
+a, a:visited {
+  color: #000;
+}
+ul, menu, dir {
+  margin: 0;
+  padding: 0;
+}
+ol, ul {
+	list-style: none;
+}
+button {
+  border-radius: 0;
+}
+/* =========================================================
+   1. BASE END
+   ========================================================= */
+
+/* =========================================================
+   2. LAYOUT
+   ========================================================= */
+.container { /* container properties */
+  position: relative;
+}
+/* ----- Header ----- */
+/* elements to remove */
+.screen-reader-text {
+  position: absolute;
+}
+.page-id-2 .entry-header, .page-id-96 .entry-header {
+  display: none;
+}
+.site-title, .site-description {
+  display: none;
+}
+/* default pages header */
+#masthead {
+  height: 5.75em;
+  background-color: #00283d;
+}
+/* -- Logo area -- */
+/* default page logo */
+.site-branding {
+  position: absolute;
+  padding: 1.375em 0;
+}
+/* logo size */
+.custom-logo-link img {
+  max-height: 3em;
+  width: 3em;
+}
+/* main nav menu */
+.main-navigation {
+  display: table;
+  margin: 0;
+  padding-left: 7em;
+  height: 5.75em;
+}
+.menu-main-navigation-container {
+  display: table-cell;
+  vertical-align: middle;
+}
+.main-navigation .menu {
+  margin-bottom: 0;
+}
+.main-navigation li {
+  display: inline-block;
+  margin-right: 3em;
+}
+.main-navigation li:nth-last-child(1), .main-navigation li:nth-last-child(2) {
+  margin-right: 0;
+}
+/* ----- /Header ----- */
+/* ----- Site Content ----- */
+.entry-header {
+  margin-top: 2em;
+}
+.has-post-thumbnail .entry-header {
+  padding-top: 6em;
+  color: #fff;
+  text-align: center;
+}
+.post-thumbnail > img {
+  position: absolute;
+  margin-top: 5.75em;
+  max-width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.entry-content {
+  min-height: 30em;
+}
+.has-post-thumbnail .entry-content {
+  min-height: 10em;
+  margin-top: 11.5em;
+}
+.admin-bar .has-post-thumbnail .entry-content {
+  margin-top: 9.5em;
+}
+/* ----- /Site Content ----- */
+/* =========================================================
+   2. LAYOUT END
+   ========================================================= */
+
+/* =========================================================
+   3. MODULE
+   ========================================================= */
+/* ----- MG Typography ----- */
+.entry-header, .mg-title, .mg-sub-title, .col-title, .col-desc, .recent-post-title, .recent-post-date, .recent-post-excerpt { /* default fonts */
+  font-family: 'Noto Sans KR', 'Lato', sans-serif;
+}
+.main-navigation a, .main-navigation a:visited {
+  font-size: .875em;
+  color: #fff;
+}
+.entry-header {
+  color: #00283d;
+}
+.entry-header .entry-title {
+  font-size: 4.5em;
+  font-weight: 900;
+}
+.recent-post-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #272727;
+}
+.recent-post-date {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #888888;
+}
+.recent-post-excerpt {
+  font-size: .875em;
+  color: #7e7e7e;
+}
+.mg-title {
+  display: inline-block;
+  margin-bottom: 0;
+  padding-right: .5em;
+  background-color: #fff;
+  font-size: 2.5em;
+  font-weight: 900;
+  color: #00283d;
+}
+.mg-sub-title {
+  font-size: 2.25em;
+  font-weight: 900;
+  color: #003957;
+}
+.col-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #272727;
+}
+.col-desc {
+  font-size: .875em;
+  color: #7e7e7e;
+}
+.col-subscription .col-desc {
+  text-align: center;
+}
+.mg-title.lg-title + .sec-title-divider {
+  width: 48%;
+  top: 4.375em;
+  right: 15px;
+  z-index: 9;
+}
+/* Mg title specific */
+@media (min-width: 514px) {
+  .mg-title.lg-title + .sec-title-divider {
+    width: 4%;
+    top: 1.5em;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .mg-title {
+    font-size: 3em;
+  }
+  .mg-title.lg-title + .sec-title-divider {
+    width: 16%;
+    top: 2em;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .mg-title {
+    font-size: 3.5em;
+  }
+  .mg-title.lg-title + .sec-title-divider {
+    width: 26%;
+    top: 2.5em;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .mg-title {
+    font-size: 4em;
+  }
+  .mg-title.lg-title + .sec-title-divider {
+    width: 26%;
+    top: 2.9375em;
+  }
+}
+/* ----- /MG Typography ----- */
+/* ----- MG Gutenberg Layout ----- */
+.container-fluid { /* bootstrap fullwidth */
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+.wp-block-columns {
+  margin-bottom: 1em;
+}
+.wp-block-columns.container {
+  margin-bottom: 4em;
+}
+.wp-block-columns:last-of-type {
+  margin-bottom: 0;
+}
+.wp-block-column {
+  word-break: keep-all; /* gutenberg reset! */
+}
+/* row 1 col bug fix */
+.has-1-columns .wp-block-column {
+  position: relative;
+  margin-right: auto !important; /* bootstrap col center */
+  margin-left: auto !important; /* bootstrap col center */
+  flex-basis: 100%;
+}
+/* /row 1 col bug fix */
+/* row 1 col recent posts ----- */
+.recent-post-title {
+}
+.recent-post-date {
+  position: absolute;
+  margin-top: -2.5em;
+  right: 0;
+}
+.recent-post-excerpt {
+  margin-top: -2em;
+}
+.more-btn {
+  position: absolute;
+  top: 1em;
+  right: .5em;
+  transform: translate(0,-50%);
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #00283d !important;
+}
+/* /row 1 col recent posts ----- */
+/* row 2 cols img:desc 2:1 */
+.grid-col2-2-1 > div:first-of-type {
+  margin-right: 0;
+  flex-basis: 100%;
+}
+.grid-col2-2-1 > div:last-of-type {
+  flex-basis: 100%;
+}
+/* /row 2 cols img:desc 2:1 */
+/* row 3 cols img+title+desc ea */
+.col-no-space .wp-block-column {
+  margin-right: 0;
+  margin-left: 0;
+}
+.col-no-space .wp-block-image {
+  margin-bottom: 1.5em;
+}
+.col-no-space .col-title {
+  margin-bottom: .5em;
+}
+.col-no-space .col-desc {
+  margin-bottom: 2em;
+}
+/* /row 3 cols img+title+desc ea */
+/* ----- /MG Gutenberg Layout ----- */
+/* ----- MG Gutenberg Module ----- */
+/* common atomic css */
+.mb-0 {margin-bottom:0px !important;}
+/* empty row */
+.row-space {
+  height: 3em !important;
+}
+/* title divider */
+.sec-title-divider {
+  position: absolute;
+  width: calc( 100% - 30px);
+  bottom: -0.4375em;
+  z-index: -1;
+  border: none;
+  height: 1px;
+  background-color: #00283d;
+}
+/* fullwidth dotted divider */
+.sec-divider {
+  border-top: 1px dotted #b0c2cd;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .wp-block-columns {
+    margin-bottom: 2em;
+  }
+  .wp-block-columns.container {
+    margin-bottom: 5em;
+  }
+  .grid-col2-2-1 > div:first-of-type {
+    flex-basis: 70%;
+  }
+  .grid-col2-2-1 > div:last-of-type {
+    flex-basis: 30%;
+  }
+  .more-btn {
+    font-size: 2em;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .col-no-space .wp-block-image {
+    margin-bottom: 2em;
+  }
+  .col-no-space .col-title {
+    margin-bottom: 1em;
+  }
+  .col-no-space .col-desc {
+    margin-bottom: 1em;
+  }
+  .more-btn {
+    font-size: 2.25em;
+  }
+}
+/* ----- /MG Gutenberg Module ----- */
+/* ----- MG Module Sticky Header ----- */
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sticky_header */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .content {
+  padding-top: 102px;
+}
+/* ----- /MG Module Sticky Header ----- */
+/* -- MG Module Fullscreen Banner -- */
+.fullscreen-banner .wp-block-column {
+  position: static;
+}
+/* master slider */
+.ms-view { /* fix left position */
+  left: 0 !important;
+}
+.ms-view, .ms-slide-bgcont {
+  height: 100vh !important;
+}
+.ms-slide-bgcont img {
+  object-fit: cover;
+}
+/* /master slider */
+/* -- /MG Row Fullscreen Banner -- */
+/* ----- MG Row Mailchimp Subscription ----- */
+.col-subscription .mc4wp-form {
+  position: relative;
+}
+.col-subscription {
+  padding: 6% 0 4% 0;
+  background-color: #f6f6f6;
+}
+.col-subscription .col-divider {
+  width: 13em !important;
+  height: .25em;
+  border: none;
+  background-color: #00283d;
+  margin-bottom: 2em;
+}
+.col-subscription .mg-sub-title {
+  margin-bottom: .5em;
+  text-align: center;
+}
+.col-subscription .col-desc {
+  margin-bottom: 3em;
+}
+.mc4wp-form-fields label {
+  display: none;
+}
+.mc4wp-form-fields input[type="email"] {
+  padding: 0 0 0 1em;
+  width: 80%;
+  max-width: 100%;
+  height: 80px;
+  font-size: 1.5em;
+}
+.mc4wp-form-fields input[type="email"]::placeholder {
+  color: #003957;
+}
+.mc4wp-form-fields input[type="submit"] {
+  position: absolute;
+  width: 20%;
+  height: 80px;
+  right: 0;
+  top: 0;
+  text-align: center;
+  font-family: Lato;
+  font-size: 1.5em;
+  font-weight: 700;
+  background-color: #00283d;
+  color: #fff;
+}
+.mc4wp-form-fields input[type="submit"]:hover {
+  background-color: #888;
+  transition: background-color .2s linear;
+}
+/* ----- /MG Row Mailchimp Subscription ----- */
+/* ----- HTML5 Video Embed ----- */
+#et-boc video { /* reset divi width limit */
+  max-width: unset !important;
+}
+#primary .entry-content .fs-video-container {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+#primary .entry-content .fs-video-row {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+.fs-video video { /* fullscreen video code block */
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+}
+#et-boc embed, #et-boc iframe, #et-boc object, #et-boc video { /* divi builder reset */
+  max-width: unset;
+}
+/* ----- /HTML5 Video Embed -----*/
+/* ----- WPML -----*/
+/* Switch header location */
+.wpml-ls-menu-item {
+  position: absolute;
+  top: 2.125em;
+  right: 0;
+}
+/* ----- /WPML -----*/
+/* ----- Ivory Search -----*/
+.main-navigation .menu { /* cancel #primary-menu relative position */
+  position: unset !important;
+}
+.search-icon { /* icon color */
+  fill: #fff;
+}
+.is-menu.dropdown form { /* dropdown position */
+  right: -4.375em;
+  top: 2em;
+}
+/* ----- /Ivory Search -----*/
+/* ----- Tablepress -----*/
+.tablepress td {
+  border: 1px solid #00416b !important;
+  text-align: center !important;
+  color: #272727;
+  font-size: .875em;
+}
+.tablepress .row-1 {
+  background-color: #fafafa;
+}
+.tablepress caption {
+  display: none;
+}
+/* ----- /Tablepress -----*/
+/* ----- Daum Map -----*/
+@media all and (max-width: 991px) {
+  #daumRoughmapContainer1544587427529 {
+    width: 100% !important;
+  }
+}
+/* ----- /Daum Map -----*/
+/* ----- WP Mobile Menu -----*/
+.page-id-96 .mob-menu-header-holder {
+  display: none;
+}
+.mob-menu-header-holder {
+  top: 2em !important;
+}
+@media only screen and (max-width: 992px) {
+  html, body {
+    overflow-x: visible !important;
+  }
+}
+/* ----- /WP Mobile Menu -----*/
+/* ----- Landing Page ----- */
+.page-id-96 footer { /* remove & footer */
+  display: none;
+}
+.page-id-96 .hentry { /* margin bottom */
+  margin: 0;
+}
+/* ----- /Landing Page ----- */
+/* ----- Cross Browser Support ----- */
+.post-thumbnail > img {
+  object-fit: cover;
+  font-family: 'object-fit: cover;';
+}
+/* ----- /Cross Browser Support ----- */
+/* =========================================================
+   3. MODULE END
+   ========================================================= */
+
+/* =========================================================
+   4. STATE
+   ========================================================= */
+.clearfix { overflow: auto !important; }
+.is-hidden    { display:    none !important; }
+.is-invisible { visibility: none !important; }
+.active {  }
+/* =========================================================
+   4. STATE END
+   ========================================================= */
+
+/* =========================================================
+   5. THEME
+   ========================================================= */
+/* ----- Main Home Design ----- */
+/* home page header */
+.page-id-2 #masthead {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  background-color: transparent;
+}
+/* home page logo */
+.page-id-2 .site-branding {
+  position: relative;
+  padding: 2em 0;
+  text-align: center;
+}
+/* main navigation */
+.page-id-2 .main-navigation {
+  margin: 0 auto;
+  padding-left: 0;
+  height: 0;
+}
+.page-id-2 .wp-block-columns:nth-of-type(2) {
+  margin-top: 3em;
+}
+/* ----- /Main Home Design ----- */
+/* =========================================================
+   5. THEME END
+   ========================================================= */

@@ -44,7 +44,7 @@ if ( ! function_exists( 'museum_ground_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary' => esc_html__( 'Primary Menu', 'museum-ground' ),
+			'menu-1' => esc_html__( 'Primary', 'museum-ground' ),
 		) );
 
 		/*
@@ -130,11 +130,11 @@ add_action( 'widgets_init', 'museum_ground_widgets_init' );
  * Enqueue scripts and styles.
  */
 function museum_ground_scripts() {
-	wp_enqueue_style( 'style', get_stylesheet_uri(), array() , time(), false );
+	wp_enqueue_style( 'museumground-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() .'/css/bootstrap.min.css',array(),'4.1.3' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() .'/css/fontawesome.min.css',array(),'5.6.1' );
 
-	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array(),  time(), true );
+	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array(), '20181212', true );
 	wp_enqueue_script( 'ofi-min-js', get_template_directory_uri() . '/js/ofi.min.js', array(), '3.2.4', true );
 	wp_enqueue_script( 'bootstrap-min-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.1.3', true );
 	wp_enqueue_script( 'museum-ground-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

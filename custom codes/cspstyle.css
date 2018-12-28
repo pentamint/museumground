@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Nunito|Roboto');
+body, h1 { /* 폰트설정 */
+  font-family: 'Nanum Gothic', 'Nunito', 'Malgun Gothic', sans-serif !important;
+}
+html { /* 윈도우 영역 */
+  background-color: #fff;
+}
+#seed-csp4-content img { /* 로고 설정 */
+      max-width: 80%;
+      width: 400px;
+}
+#seed-csp4-headline { /* 헤드라인 레이아웃 설정 */
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: .125em;
+}
+#seed-csp4-page { /* 메인 페이지 영역 */
+  background: url(https://s3-ap-northeast-2.amazonaws.com/museumground/wp-content/uploads/2018/09/17184258/preopening-poster-0917.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+#seed-csp4-content { /* 메인 컨텐츠 영역 */
+  display: none;
+}
+#seed-csp4-description {
+  word-break: keep-all;
+  font-size: 16px;
+}
+.seed-csp4 h1, .seed-csp4 .h1 { /* 헤드라인폰트설정 */
+  font-size: 24px;
+}
+@media screen and (max-width:480px) {
+  #seed-csp4-content {
+    min-width: 300px;
+    padding: 20px;
+  }
+  #seed-csp4-content img {
+    max-width: 100%;
+  }
+}
