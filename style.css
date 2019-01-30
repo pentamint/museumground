@@ -115,6 +115,11 @@ a.skip-link:hover {
 .navbar :not(.show).collapse {
   max-height: 4em;
 }
+@media (min-width: 992px) {
+  .navbar :not(.show).collapse {
+    margin: 0 auto; /* flex not working */
+  }
+}
 /* / */
 .navbar, .nav-wrapper {
   width: 100%;
@@ -151,6 +156,9 @@ a.skip-link:hover {
   -o-transition: left .3s ease-out;
   -moz-transition: left .3s ease-out;
   transition: left .3s ease-out;
+}
+.navbar-nav {
+  position: static !important;
 }
 .navbar-nav li {
   line-height: 1em;
@@ -870,7 +878,7 @@ a.skip-link:hover {
     width: calc((100% - 60px) / 3) !important;
     margin-right: 30px;
   }
-  .column-1_of_3:nth-of-type(3) {
+  .column-1_of_3:nth-of-type(4n+3) {
     margin-right: 0;
   }
 }
